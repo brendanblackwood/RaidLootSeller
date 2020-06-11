@@ -1,0 +1,10 @@
+## Interface: 80300
+## Title: RaidLootSeller
+## Author: Gwod-Stormrage
+## Version: 0.1.1
+## SavedVariables: RaidLootSellerDB
+
+embeds.xml
+
+RaidLootSeller-Util.lua
+RaidLootSeller.lua
