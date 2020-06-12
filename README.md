@@ -5,7 +5,7 @@ Heavily borrowed from [RaidLootRoller](https://www.curseforge.com/wow/addons/rai
 Addon for managing auctioning off items in a raid. I wrote this to help my guild with sale runs where buyers have the option to buy loot that drops for gulid members.
 
 ## Usage
-Type `/rls` to see configuration options. Once you are ready to sell, just have your raid or party member **whisper you** the word "sell" then the item they want to put up for acution. For example:
+Type `/rls` to see configuration options. Once you are ready to sell, just have your raid or party member **whisper you** the word "sell" then link the item they want to put up for acution. For example:
 
     sell [Sunfury Bow of the Phoenix]
 

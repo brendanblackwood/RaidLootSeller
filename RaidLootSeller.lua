@@ -283,7 +283,7 @@ function RaidLootSeller:ProcessBidMessage(message, sender)
         return
     end
     
-    local _, _, num, suffix = string.find(message, '^(%d+%.?[%d+]?)([k|K|m|M]?)$')
+    local _, _, num, suffix = string.find(message, '^(%d+%.?%d*)([k|K|m|M]?)$')
     if num == nil then
         RLS_SendWhisper('Please provide a bid of the form "5000" or "5k"', sender)
         return
@@ -318,7 +318,7 @@ function RaidLootSeller:ProcessSellMessage(message, sender)
         sender = RLS_GetUnitNameWithRealm(sender)
     end
 
-    -- if the person whispered 'sell [item]' or '[item] sell', then add the item to the array so we can process it
+    -- if the person whispered 'sell [item]', then add the item to the array so we can process it
     local _, _, whisperedItem = string.find(message, '[sell|Sell|SELL][%s]*(|.+|r)')
     if whisperedItem ~= nil then
         whisperedItems[sender] = whisperedItem
@@ -353,7 +353,7 @@ function RaidLootSeller:ProcessWhisper(message, sender)
     end
 
     -- process bids
-    if string.match(msg, '^(%d+%.?[%d+]?)([k|K|m|M]?)$') ~= nil then
+    if string.match(msg, '^(%d+%.?%d*)([k|K|m|M]?)$') ~= nil then
         self:ProcessBidMessage(message, sender)
     end
 end
